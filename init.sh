@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo ln -sf ~/tmux/.tmux.conf ~/.tmux.conf
-tmux source-file ~/.tmux.conf
+ln -sf ~/tmux/.tmux.conf ~/.tmux.conf
+tmux start-server \; source ~/.tmux.conf
 echo "Done"
