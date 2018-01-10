@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 ln -sf ~/tmux/.tmux.conf ~/.tmux.conf
 sudo apt-get install -y xclip
 
