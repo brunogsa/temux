@@ -1,14 +1,17 @@
 #!/bin/bash
 ln -sf ~/tmux/.tmux.conf ~/.tmux.conf
-sudo apt-get install -y xclip
 
-sudo apt-get update
-sudo apt-get install -y software-properties-common
+brew install xclip
 
 # Install Tmux
-sudo apt-get install -y tmux
+brew install tmux
 
-sudo apt-get install -y fonts-powerline
+# Install powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd -
+rm -rf fonts
 
 tmux start-server \; source ~/.tmux.conf
 echo "Done"
