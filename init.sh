@@ -13,5 +13,11 @@ cd fonts
 cd -
 rm -rf fonts
 
+# Plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 tmux start-server \; source ~/.tmux.conf
+
+~/.tmux/plugins/tpm/bin/install_plugins
+
 echo "Done"
